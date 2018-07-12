@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html";>
+<meta name="keywords" content=" - HTML Report">
+<meta name="author" content="Datanamic - www.datanamic.com">
+<title>Modelo Multidimensional DTB</title>
+<link rel="stylesheet" type="text/css" media="screen,print" href="dbautodoc.css" title="report">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="20" topmargin="10" marginwidth="20" marginheight="10">
+<div class="top">
+Modelo Multidimensional DTB
+</div>
+<ul id="menu">
+<li><a href="index.html">Project details</a></li>
+<li><a href="erdiagram.html">ER diagram</a></li>
+<li><a href="entl.html">Entities</a></li>
+<li><a href="attrl.html">Attributes</a></li>
+<li><a href="rell.html">Relationships</a></li>
+</ul>
+<div class="row">
+<div class="activetab">List of entities</div>
+<div class="tab"><a href="entd.html">Entity details</a></div>
+</div>
+<table width=90% border=0 cellSpacing=0 cellPadding=0 class="chapter">
+<tr>
+<td class="right" valign=top>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "24%" class="fieldname">Primary key constraint name</td><td valign="top" width= "10%" class="fieldname">Number of columns</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#dia_semana">dia_semana</A></td><td valign="top" class="fielddata">PK_dia_semana</td><td valign="top" class="fielddata">3</td><td valign="top" class="fielddata"></td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#evento">evento</A></td><td valign="top" class="fielddata">PK_evento</td><td valign="top" class="fielddata">5</td><td valign="top" class="fielddata">Contiene la definición de los eventos especiales que se presentan durante el año</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td><td valign="top" class="fielddata">PK_fecha</td><td valign="top" class="fielddata">14</td><td valign="top" class="fielddata">Contiene la información de las fechas en la que se ejecutó una operación</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#flota_programada">flota_programada</A></td><td valign="top" class="fielddata">PK_flota_programada</td><td valign="top" class="fielddata">6</td><td valign="top" class="fielddata">Contiene la información de la programación diaria por operador</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#flota_total">flota_total</A></td><td valign="top" class="fielddata">PK_flota_total</td><td valign="top" class="fielddata">13</td><td valign="top" class="fielddata">Contiene la información registrada de forma diaria de qué vehículos pertenecen a que operador y si estos fueron asignados o no a la operación del día</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#hora">hora</A></td><td valign="top" class="fielddata">PK_hora</td><td valign="top" class="fielddata">6</td><td valign="top" class="fielddata">Contiene la hora en la que se efectuó una operación</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#linea">linea</A></td><td valign="top" class="fielddata">PK_linea</td><td valign="top" class="fielddata">3</td><td valign="top" class="fielddata">Contiene la información de las Lineas SAE del sistema Zonal</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#linea_ruta">linea_ruta</A></td><td valign="top" class="fielddata">PK_linea_ruta</td><td valign="top" class="fielddata">4</td><td valign="top" class="fielddata">Contiene la relación entre línea SAE y ruta SAE del sistema Zonal</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#operador">operador</A></td><td valign="top" class="fielddata">PK_operador</td><td valign="top" class="fielddata">4</td><td valign="top" class="fielddata">Contiene la información de las empresas que administran y operan las rutas zonales</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#ruta">ruta</A></td><td valign="top" class="fielddata">PK_ruta</td><td valign="top" class="fielddata">2</td><td valign="top" class="fielddata">Contiene la información de las Rutas SAE del sistema Zonal</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#tipo_dia">tipo_dia</A></td><td valign="top" class="fielddata">PK_tipo_dia</td><td valign="top" class="fielddata">2</td><td valign="top" class="fielddata">Contiene la información de los tipos de día</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#tipo_evento">tipo_evento</A></td><td valign="top" class="fielddata">PK_tipo_evento</td><td valign="top" class="fielddata">3</td><td valign="top" class="fielddata">Contiene la información de los tipos de evento.</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#tipo_hora">tipo_hora</A></td><td valign="top" class="fielddata">PK_tipo_hora</td><td valign="top" class="fielddata">2</td><td valign="top" class="fielddata">Contiene la información de los tipos de hora</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#tipo_horario">tipo_horario</A></td><td valign="top" class="fielddata">PK_tipo_horario</td><td valign="top" class="fielddata">2</td><td valign="top" class="fielddata">Contiene la información de los tipos de horario: Madrugada,  Mañana,  Tarde,  Noche</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#tipo_servicio">tipo_servicio</A></td><td valign="top" class="fielddata">PK_tipo_servicio</td><td valign="top" class="fielddata">2</td><td valign="top" class="fielddata">Contiene la información de las tipologías de servicio conforme se registran la tabla tipo_servicio de la Base de datos SAEBaseNext</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#tipo_vehiculo">tipo_vehiculo</A></td><td valign="top" class="fielddata">PK_tipo_vehiculo</td><td valign="top" class="fielddata">3</td><td valign="top" class="fielddata">Contiene la información de las tipologías de vehículos conforme se registran la tabla vehiculos_tipo de la Base de datos SAEBaseNext</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="entd.html#vehiculo">vehiculo</A></td><td valign="top" class="fielddata">Vehiculos_pkey</td><td valign="top" class="fielddata">7</td><td valign="top" class="fielddata">Contiene la información de los vehículos que operan en el sistema Zonal.</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

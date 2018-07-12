@@ -1,0 +1,685 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html";>
+<meta name="keywords" content=" - HTML Report">
+<meta name="author" content="Datanamic - www.datanamic.com">
+<title>Modelo Multidimensional DTB</title>
+<link rel="stylesheet" type="text/css" media="screen,print" href="dbautodoc.css" title="report">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="20" topmargin="10" marginwidth="20" marginheight="10">
+<div class="top">
+Modelo Multidimensional DTB
+</div>
+<ul id="menu">
+<li><a href="index.html">Project details</a></li>
+<li><a href="erdiagram.html">ER diagram</a></li>
+<li><a href="entl.html">Entities</a></li>
+<li><a href="attrl.html">Attributes</a></li>
+<li><a href="rell.html">Relationships</a></li>
+</ul>
+<div class="row">
+<div class="tab"><a href="entl.html">List of entities</a></div>
+<div class="activetab">Entity details</div>
+</div>
+<table width=90% border=0 cellSpacing=0 cellPadding=0 class="chapter">
+<tr>
+<td class="right" valign=top>
+<A NAME="dia_semana"></A>
+<div class="objectname">Entity: dia_semana</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_dia_semana</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata"></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_dia_semana">id_dia_semana</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código consecutivo que identifica el día de la semana</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#nombre_dia_semana">nombre_dia_semana</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(10)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Nombre que se asocia al día de la semana. Lunes,  Martes. Miércoles,  etc.</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#abrev_dia_semana">abrev_dia_semana</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(3)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Abreviatura del día de la semana. Lu,  Ma,  Mi,  etc.</td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">dia_semana_fecha</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">dia_semana</td><td valign="top" class="fielddata">fecha</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (abrev_dia_semana)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_dia_semana)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (nombre_dia_semana)</td></tr>
+<tr><td valign="top" class="fielddata">PK_dia_semana</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_dia_semana)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="evento"></A>
+<div class="objectname">Entity: evento</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_evento</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la definición de los eventos especiales que se presentan durante el año</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_evento">id_evento</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código consecutivo que identifica el evento</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#nombre_evento">nombre_evento</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(50)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Nombre con el que se identifica el evento</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#fecha_inicio">fecha_inicio</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">DATE</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Fecha en la que inicia el evento</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#fecha_fin">fecha_fin</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">DATE</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Fecha en la que finalizael evento</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_tipo_evento">id_tipo_evento</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">evento_fecha</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">evento</td><td valign="top" class="fielddata">fecha</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">tipo_evento_evento</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">tipo_evento</td><td valign="top" class="fielddata">evento</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_tipo_evento)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_evento)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (nombre_evento)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (fecha_inicio)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (fecha_fin)</td></tr>
+<tr><td valign="top" class="fielddata">PK_evento</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_evento)</td></tr>
+<tr><td valign="top" class="fielddata">tipo_evento_evento</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_tipo_evento) REFERENCES tipo_evento(id_tipo_evento)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="fecha"></A>
+<div class="objectname">Entity: fecha</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_fecha</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la información de las fechas en la que se ejecutó una operación</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_fecha">id_fecha</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">BIGSERIAL</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código consecutivo que identifica la fecha</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#fecha">fecha</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">DATE</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata"></td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#dia">dia</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Número de día que compone la fecha</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#mes">mes</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Número de Mes que compone la fecha</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#anyo">anyo</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Año que compone la fecha</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#semana">semana</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">No. de semana del año a la que se asocia la semana</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#quincena">quincena</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Corresponde a la quincena del mes a la que pertenece la fecha</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#bimestre">bimestre</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Corresponde al bimestre del año al que pertenece la fecha</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#trimestre">trimestre</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Corresponde al trimestredel año al que pertenece la fecha</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#cuatrimestre">cuatrimestre</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Corresponde al cuatrimestre del año al que pertenece la fecha</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#semestre">semestre</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Corresponde al semestre del año al que pertenece la fecha</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_dia_semana">id_dia_semana</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Corresponde al día de la semana asociado (Lunes,  Martes,  Miércoles,  etc)</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_evento">id_evento</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">Corresponde al evento al que se asocia la fecha. Semana Santa,  Navidad,  etc.</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_tipo_dia">id_tipo_dia</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">dia_semana_fecha</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">dia_semana</td><td valign="top" class="fielddata">fecha</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">evento_fecha</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">evento</td><td valign="top" class="fielddata">fecha</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">fecha_flota_programada</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">fecha</td><td valign="top" class="fielddata">flota_programada</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">fecha_flota_total</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">fecha</td><td valign="top" class="fielddata">flota_total</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">fecha_flota_total_2</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">fecha</td><td valign="top" class="fielddata">flota_total</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">fecha_flota_total_3</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">fecha</td><td valign="top" class="fielddata">flota_total</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">tipo_dia_fecha</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">tipo_dia</td><td valign="top" class="fielddata">fecha</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_tipo_dia)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_fecha)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (fecha)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (dia)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (mes)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (anyo)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (semana)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (quincena)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (bimestre)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (trimestre)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (cuatrimestre)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (semestre)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_dia_semana)</td></tr>
+<tr><td valign="top" class="fielddata">dia_semana_fecha</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_dia_semana) REFERENCES dia_semana(id_dia_semana)</td></tr>
+<tr><td valign="top" class="fielddata">evento_fecha</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_evento) REFERENCES evento(id_evento)</td></tr>
+<tr><td valign="top" class="fielddata">PK_fecha</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_fecha)</td></tr>
+<tr><td valign="top" class="fielddata">tipo_dia_fecha</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_tipo_dia) REFERENCES tipo_dia(id_tipo_dia)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="flota_programada"></A>
+<div class="objectname">Entity: flota_programada</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_flota_programada</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la información de la programación diaria por operador</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_flota_programada">id_flota_programada</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">BIGSERIAL</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código consecutivo con el que se identifica el registro de flota programada</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_fecha_programacion">id_fecha_programacion</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">BIGINT</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código de la fecha en la que es programado el servicio de bus</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_operador">id_operador</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Operador relacionado al servicio de bus programado</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_linea">id_linea</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Linea SAE asociada al servicio de bus programado</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_ruta">id_ruta</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Ruta SAE asociada al servicio de bus programado</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#servbus">servbus</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(20)</td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">Identificador del Servicio de Bus programado. Este campo corresponde al campo Servbus de la vista vwPlanificacionHorario de la base de datos SAEBaseNext</td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">fecha_flota_programada</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">fecha</td><td valign="top" class="fielddata">flota_programada</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">linea_ruta_flota_programada</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">linea_ruta</td><td valign="top" class="fielddata">flota_programada</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">operador_flota_programada</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">operador</td><td valign="top" class="fielddata">flota_programada</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_ruta)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_flota_programada)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_fecha_programacion)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_operador)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_linea)</td></tr>
+<tr><td valign="top" class="fielddata">fecha_flota_programada</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_fecha_programacion) REFERENCES fecha(id_fecha)</td></tr>
+<tr><td valign="top" class="fielddata">linea_ruta_flota_programada</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_linea, id_ruta) REFERENCES linea_ruta(id_linea, id_ruta)</td></tr>
+<tr><td valign="top" class="fielddata">operador_flota_programada</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_operador) REFERENCES operador(id_operador)</td></tr>
+<tr><td valign="top" class="fielddata">PK_flota_programada</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_flota_programada)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="flota_total"></A>
+<div class="objectname">Entity: flota_total</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_flota_total</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la información registrada de forma diaria de qué vehículos pertenecen a que operador y si estos fueron asignados o no a la operación del día</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_flota_total">id_flota_total</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">BIGSERIAL</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código consecutivo con el que se identifica el registro de flota total</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_fecha_operacion">id_fecha_operacion</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">BIGINT</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código de la fecha de operación relacionada</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_vehiculo">id_vehiculo</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código del Vehículo equivalente al campo Vehiculo de la tabla Vehiculos de la Base de Datos SAEBaseNext</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_operador">id_operador</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código del operador relacionado</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#estado_vinculacion">estado_vinculacion</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER(1)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Estado de vinculación: V - Vinculado y D - Desvinculado</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#estado_vehiculo">estado_vehiculo</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER(1)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Estado del Vehículo: A - Activo,  I - Inactivo</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#estado_asignacion">estado_asignacion</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER(1)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Estado de Asignación: A - Asignado,  N - No Asignado</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#vinculacion">vinculacion</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">DATE</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Fecha de Vinculación</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#certvinculacion">certvinculacion</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">No. de certificado de vinculación</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_fecha_inmovilizacion">id_fecha_inmovilizacion</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">BIGINT</td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">Código de la fecha de inmovilización relacionada</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#hora_inmovilizacion">hora_inmovilizacion</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">TIME</td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">Hora de Inmovilización de un vehículo</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_fecha_habilitacion">id_fecha_habilitacion</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">BIGINT</td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">Código de la fecha de habilitación relacionada</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#hora_habilitacion">hora_habilitacion</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">TIME</td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">Hora de habilitación de un vehículo</td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">fecha_flota_total</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">fecha</td><td valign="top" class="fielddata">flota_total</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">fecha_flota_total_2</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">fecha</td><td valign="top" class="fielddata">flota_total</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">fecha_flota_total_3</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">fecha</td><td valign="top" class="fielddata">flota_total</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">operador_flota_total</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">operador</td><td valign="top" class="fielddata">flota_total</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">vehiculo_flota_total</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">vehiculo</td><td valign="top" class="fielddata">flota_total</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (certvinculacion)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_flota_total)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_fecha_operacion)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_vehiculo)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_operador)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (estado_vinculacion)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (estado_vehiculo)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (estado_asignacion)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (vinculacion)</td></tr>
+<tr><td valign="top" class="fielddata">fecha_flota_total</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_fecha_operacion) REFERENCES fecha(id_fecha)</td></tr>
+<tr><td valign="top" class="fielddata">fecha_flota_total_2</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_fecha_inmovilizacion) REFERENCES fecha(id_fecha)</td></tr>
+<tr><td valign="top" class="fielddata">fecha_flota_total_3</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_fecha_habilitacion) REFERENCES fecha(id_fecha)</td></tr>
+<tr><td valign="top" class="fielddata">operador_flota_total</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_operador) REFERENCES operador(id_operador)</td></tr>
+<tr><td valign="top" class="fielddata">PK_flota_total</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_flota_total)</td></tr>
+<tr><td valign="top" class="fielddata">vehiculo_flota_total</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_vehiculo) REFERENCES vehiculo(id_vehiculo)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="hora"></A>
+<div class="objectname">Entity: hora</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_hora</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la hora en la que se efectuó una operación</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_hora">id_hora</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código consecutivo que identifica el registro de la hora</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#hora">hora</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Hora</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#minuto">minuto</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Minutos que componen la hora</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_tipo_hora">id_tipo_hora</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Tipo de hora relacionada</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_tipo_horario">id_tipo_horario</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Tipo de horario relacionado</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_tipo_dia">id_tipo_dia</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">tipo_dia_hora</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">tipo_dia</td><td valign="top" class="fielddata">hora</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">tipo_horario_hora</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">tipo_horario</td><td valign="top" class="fielddata">hora</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">tipo_hora_hora</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">tipo_hora</td><td valign="top" class="fielddata">hora</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_tipo_dia)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_hora)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (hora)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (minuto)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_tipo_hora)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_tipo_horario)</td></tr>
+<tr><td valign="top" class="fielddata">PK_hora</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_hora)</td></tr>
+<tr><td valign="top" class="fielddata">tipo_dia_hora</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_tipo_dia) REFERENCES tipo_dia(id_tipo_dia)</td></tr>
+<tr><td valign="top" class="fielddata">tipo_horario_hora</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_tipo_horario) REFERENCES tipo_horario(id_tipo_horario)</td></tr>
+<tr><td valign="top" class="fielddata">tipo_hora_hora</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_tipo_hora) REFERENCES tipo_hora(id_tipo_hora)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="linea"></A>
+<div class="objectname">Entity: linea</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_linea</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la información de las Lineas SAE del sistema Zonal</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_linea">id_linea</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código con el que se identifica la linea en el SAE</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#nombre_linea">nombre_linea</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(50)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Nombre con el que se identifica la línea en el SAE</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#ruta_comercial">ruta_comercial</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(50)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Nombre con el que se da a conocer al público en general</td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">linea_linea_ruta</td><td valign="top" class="fielddata">Identifying</td><td valign="top" class="fielddata">linea</td><td valign="top" class="fielddata">linea_ruta</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (ruta_comercial)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_linea)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (nombre_linea)</td></tr>
+<tr><td valign="top" class="fielddata">PK_linea</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_linea)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="linea_ruta"></A>
+<div class="objectname">Entity: linea_ruta</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_linea_ruta</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la relación entre línea SAE y ruta SAE del sistema Zonal</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_linea">id_linea</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Identificador de la línea SAE. Este código corresponde al mismo del campo linea de la tabla Lineas de la Base de Datos SAEExplotacionNext. Junto con la ruta SAE conforman la llave primaria.</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_ruta">id_ruta</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Identificador de la ruta SAE. Este código corresponde al mismo del campo ruta de la tabla Rutas de la Base de Datos SAEExplotacionNext. Junto con la línea SAE conforman la llave primaria.</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_ruta_padre">id_ruta_padre</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">En el caso que se trate de una ruta de refuerzo,  este campo contendrá la ruta original a la que se le brinda dicho refuerzo</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#distancia">distancia</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Distnacia en metros de una ruta</td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">linea_linea_ruta</td><td valign="top" class="fielddata">Identifying</td><td valign="top" class="fielddata">linea</td><td valign="top" class="fielddata">linea_ruta</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">linea_ruta_flota_programada</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">linea_ruta</td><td valign="top" class="fielddata">flota_programada</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">ruta_linea_ruta</td><td valign="top" class="fielddata">Identifying</td><td valign="top" class="fielddata">ruta</td><td valign="top" class="fielddata">linea_ruta</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">ruta_linea_ruta_2</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">ruta</td><td valign="top" class="fielddata">linea_ruta</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Default</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">distancia DEFAULT 0</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_linea)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_ruta)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Default</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">id_ruta_padre DEFAULT 0</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (distancia)</td></tr>
+<tr><td valign="top" class="fielddata">linea_linea_ruta</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_linea) REFERENCES linea(id_linea)</td></tr>
+<tr><td valign="top" class="fielddata">PK_linea_ruta</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_linea,  id_ruta)</td></tr>
+<tr><td valign="top" class="fielddata">ruta_linea_ruta</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_ruta) REFERENCES ruta(id_ruta)</td></tr>
+<tr><td valign="top" class="fielddata">ruta_linea_ruta_2</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_ruta_padre) REFERENCES ruta(id_ruta)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="operador"></A>
+<div class="objectname">Entity: operador</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_operador</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la información de las empresas que administran y operan las rutas zonales</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_operador">id_operador</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Identificador del operador</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#nombre_sae">nombre_sae</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(50)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Nombre del operador con el que se identifica en el SAE</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#refer_validacion">refer_validacion</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(100)</td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">Nombre de referencia con el que se identifica en las Validaciones de RB</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#nombre_informe">nombre_informe</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(20)</td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">Nombre del Operador que se emplea para informes</td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">operador_flota_programada</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">operador</td><td valign="top" class="fielddata">flota_programada</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">operador_flota_total</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">operador</td><td valign="top" class="fielddata">flota_total</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (nombre_sae)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_operador)</td></tr>
+<tr><td valign="top" class="fielddata">PK_operador</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_operador)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="ruta"></A>
+<div class="objectname">Entity: ruta</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_ruta</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la información de las Rutas SAE del sistema Zonal</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_ruta">id_ruta</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Identificador de la ruta SAE. Este código corresponde al mismo del campo ruta de la tabla Rutas de la Base de Datos SAEExplotacionNext</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#sentido">sentido</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Sentido de la ruta. <BR>1 - Ida. <BR>2 - Vuelta <BR>3 - Circular</td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">ruta_linea_ruta</td><td valign="top" class="fielddata">Identifying</td><td valign="top" class="fielddata">ruta</td><td valign="top" class="fielddata">linea_ruta</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">ruta_linea_ruta_2</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">ruta</td><td valign="top" class="fielddata">linea_ruta</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Default</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">sentido DEFAULT 3</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_ruta)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (sentido)</td></tr>
+<tr><td valign="top" class="fielddata">PK_ruta</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_ruta)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="tipo_dia"></A>
+<div class="objectname">Entity: tipo_dia</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_tipo_dia</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la información de los tipos de día</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_tipo_dia">id_tipo_dia</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código consecutivo con el que se identifica el tipo de día</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#nombre_tipo_dia">nombre_tipo_dia</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(20)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Nombre que identifica al tipo de día</td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">tipo_dia_fecha</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">tipo_dia</td><td valign="top" class="fielddata">fecha</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">tipo_dia_hora</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">tipo_dia</td><td valign="top" class="fielddata">hora</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (nombre_tipo_dia)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_tipo_dia)</td></tr>
+<tr><td valign="top" class="fielddata">PK_tipo_dia</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_tipo_dia)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="tipo_evento"></A>
+<div class="objectname">Entity: tipo_evento</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_tipo_evento</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la información de los tipos de evento.</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_tipo_evento">id_tipo_evento</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código consecutivo con el que se identifica el tipo de evento</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#nombre_tipo_evento">nombre_tipo_evento</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(50)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Nombre con el que se identifica el tipo de evento</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#jornadatipo_sae">jornadatipo_sae</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(20)</td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">Código del tipo de Jornada identificada en el SAE</td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">tipo_evento_evento</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">tipo_evento</td><td valign="top" class="fielddata">evento</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (nombre_tipo_evento)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_tipo_evento)</td></tr>
+<tr><td valign="top" class="fielddata">PK_tipo_evento</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_tipo_evento)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="tipo_hora"></A>
+<div class="objectname">Entity: tipo_hora</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_tipo_hora</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la información de los tipos de hora</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_tipo_hora">id_tipo_hora</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código consecutivo con el que se identifica el tipo de hora</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#nombre_tipo_hora">nombre_tipo_hora</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(40)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Nombre con el que se reconoce el tipo de hora</td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">tipo_hora_hora</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">tipo_hora</td><td valign="top" class="fielddata">hora</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (nombre_tipo_hora)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_tipo_hora)</td></tr>
+<tr><td valign="top" class="fielddata">PK_tipo_hora</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_tipo_hora)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="tipo_horario"></A>
+<div class="objectname">Entity: tipo_horario</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_tipo_horario</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la información de los tipos de horario: Madrugada,  Mañana,  Tarde,  Noche</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_tipo_horario">id_tipo_horario</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código consecutivo con el que se identifica el tipo de horario</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#nombre_tipo_horario">nombre_tipo_horario</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(40)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Nombre asociado al tipo de horario</td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">tipo_horario_hora</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">tipo_horario</td><td valign="top" class="fielddata">hora</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (nombre_tipo_horario)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_tipo_horario)</td></tr>
+<tr><td valign="top" class="fielddata">PK_tipo_horario</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_tipo_horario)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="tipo_servicio"></A>
+<div class="objectname">Entity: tipo_servicio</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_tipo_servicio</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la información de las tipologías de servicio conforme se registran la tabla tipo_servicio de la Base de datos SAEBaseNext</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_tipo_servicio">id_tipo_servicio</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código consecutivo del tipo de servicio</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#descripcion_tipo_servicio">descripcion_tipo_servicio</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(50)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Descripción asociada al tipo de servicio</td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">tipo_servicio_vehiculo</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">tipo_servicio</td><td valign="top" class="fielddata">vehiculo</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (descripcion_tipo_servicio)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_tipo_servicio)</td></tr>
+<tr><td valign="top" class="fielddata">PK_tipo_servicio</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_tipo_servicio)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="tipo_vehiculo"></A>
+<div class="objectname">Entity: tipo_vehiculo</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">PK_tipo_vehiculo</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la información de las tipologías de vehículos conforme se registran la tabla vehiculos_tipo de la Base de datos SAEBaseNext</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_tipo_vehiculo">id_tipo_vehiculo</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código consecutivo del tipo de vehículo</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#descripcion_tipo_vehiculo">descripcion_tipo_vehiculo</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(50)</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Descripción asociada al tipo de vehículo</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#capacidad_tipo_vehiculo">capacidad_tipo_vehiculo</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Capacidad en No. de pasajeros asociada al tipo de vehículo</td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">tipo_vehiculo_vehiculo</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">tipo_vehiculo</td><td valign="top" class="fielddata">vehiculo</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (capacidad_tipo_vehiculo)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_tipo_vehiculo)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (descripcion_tipo_vehiculo)</td></tr>
+<tr><td valign="top" class="fielddata">PK_tipo_vehiculo</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_tipo_vehiculo)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+<A NAME="vehiculo"></A>
+<div class="objectname">Entity: vehiculo</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Primary key constraint name</td><td valign="top" class="fielddata">Vehiculos_pkey</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Contiene la información de los vehículos que operan en el sistema Zonal.</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Table options</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "19%" class="fieldname">Column name</td><td valign="top" width= "14%" class="fieldname">Primary key</td><td valign="top" width= "19%" class="fieldname">Data type</td><td valign="top" width= "10%" class="fieldname">Not NULL</td><td valign="top" width= "38%" class="fieldname">Comment</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_vehiculo">id_vehiculo</A></td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Código consecutivo con el que se identifica el vehículo. Corresponde al mismo código del campo vehiculo de la tabla Vehiculos de la base de datos SAEBaseNext</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#etiqueta">etiqueta</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">TEXT</td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">Etiqueta con que se identifica el vehículo</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#matricula">matricula</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">TEXT</td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">Corresponde a la placa del vehículo</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#licenciatransito">licenciatransito</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">CHARACTER VARYING(40)</td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">Licencia de tránsito del vehículo</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#expedicionlicencia">expedicionlicencia</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">TIME</td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">Fecha de expedición de la licencia de tránsito</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_tipo_vehiculo">id_tipo_vehiculo</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata">Tipo de vehículo relacionado</td></tr>
+<tr><td valign="top" class="fielddata"><A HREF="attrd.html#id_tipo_servicio">id_tipo_servicio</A></td><td valign="top" class="fielddata">No</td><td valign="top" class="fielddata">INTEGER</td><td valign="top" class="fielddata">Yes</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "24%" class="fieldname">Name</td><td valign="top" width= "20%" class="fieldname">Relationship type</td><td valign="top" width= "16%" class="fieldname">Parent</td><td valign="top" width= "16%" class="fieldname">Child</td><td valign="top" width= "24%" class="fieldname">Cardinality</td></tr>
+<tr><td valign="top" class="fielddata">tipo_servicio_vehiculo</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">tipo_servicio</td><td valign="top" class="fielddata">vehiculo</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">tipo_vehiculo_vehiculo</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">tipo_vehiculo</td><td valign="top" class="fielddata">vehiculo</td><td valign="top" class="fielddata">One Or More</td></tr>
+<tr><td valign="top" class="fielddata">vehiculo_flota_total</td><td valign="top" class="fielddata">Non Identifying</td><td valign="top" class="fielddata">vehiculo</td><td valign="top" class="fielddata">flota_total</td><td valign="top" class="fielddata">One Or More</td></tr>
+</table>
+<BR>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "29%" class="fieldname">Name</td><td valign="top" width= "19%" class="fieldname">Type</td><td valign="top" width= "19%" class="fieldname">Level</td><td valign="top" width= "33%" class="fieldname">Constraint</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_tipo_servicio)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_vehiculo)</td></tr>
+<tr><td valign="top" class="fielddata"></td><td valign="top" class="fielddata">Not Null</td><td valign="top" class="fielddata">Column Constraint</td><td valign="top" class="fielddata">NOT NULL (id_tipo_vehiculo)</td></tr>
+<tr><td valign="top" class="fielddata">tipo_servicio_vehiculo</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_tipo_servicio) REFERENCES tipo_servicio(id_tipo_servicio)</td></tr>
+<tr><td valign="top" class="fielddata">tipo_vehiculo_vehiculo</td><td valign="top" class="fielddata">Foreign Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">FOREIGN KEY (id_tipo_vehiculo) REFERENCES tipo_vehiculo(id_tipo_vehiculo)</td></tr>
+<tr><td valign="top" class="fielddata">Vehiculos_pkey</td><td valign="top" class="fielddata">Primary Key</td><td valign="top" class="fielddata">Table Constraint</td><td valign="top" class="fielddata">PRIMARY KEY (id_vehiculo)</td></tr>
+</table>
+<BR>
+<BR>
+<BR>
+</td>
+</tr>
+</table>
+</body>
+</html>

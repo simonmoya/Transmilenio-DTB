@@ -1,0 +1,187 @@
+QUERY GENERA INFORMACION DE VEHICULOS 
+----------------------------------------------------------------------------------------------------------------------
+Select distinct a.vehiculo, a.etiqueta, a.matricula, a.licenciatransito, 
+convert(varchar,a.expedicionlicencia,111),
+b.tipo, b.tiposervicio 
+From Vehiculos a, Vehiculos_Basico b 
+where
+a.matricula = b.matricula
+
+Consulta La Flota Total
+----------------------------------------------------------------------------------------------------------------------
+Select b.operador, b.matricula, b.etiqueta 
+From
+SAEBaseNext.dbo.Vehiculos b, 
+(Select matricula, max(vinculacion) as vinculacion from SAEBaseNext.dbo.Vehiculos
+Where CONVERT(DATE,vinculacion) <= '2018/04/18' 
+group by matricula) d
+WHERE
+b.matricula = d.matricula
+And b.vinculacion = d.vinculacion
+
+
+Consulta la programación por operador
+-------------------------------------------------------------------------------------------------------------------
+Select a.fecha, a.operador, count(*)
+FROM
+(Select DISTINCT A.fecha, A.operador, A.linea, A.ruta, A.servbus, b.horateor, b.horareal 
+From
+(SELECT distinct 
+DATEDIFF(day, '2016/06/01', fecha)+1 as fecha, operador, linea, Ruta, servbus
+  FROM 
+  [SAEBaseNext].[dbo].[Vigencias] v with (nolock),
+  [SAEBaseNext].[dbo].[vwPlanificacionHorario] a with (nolock)  
+  WHERE 
+  a.JornadaTipo = v.JornadaTipo 
+  AND CONVERT(DATE,v.Fecha)='2018/04/25'
+  And Not a.linea in (769,743,793) 
+  And a.Ruta > 0
+  And a.evento in (11,3)) As A  
+  LEFT JOIN 
+  (Select distinct servicio, convert(varchar,HoraTeor,108) as HoraTeor, convert(varchar,HoraReal,108) as HoraReal
+  From [SAEExplotacionNext].[dbo].[AcumuladoViajes] with(nolock)
+  Where 
+  Fecha='2018-04-25'
+  AND ViajeLinea not in ('0') 
+  And Ruta != 0
+  AND Planificado='1') As B 
+  ON A.servbus = b.Servicio   )  a
+Group by a.fecha, a.Operador
+Order by 1, 2
+
+
+SELECT distinct DATEDIFF(day, '2016/06/01', fecha)+1, operador, linea, Ruta, servbus
+  FROM 
+  [SAEBaseNext].[dbo].[vwPlanificacionHorario] with (nolock), [SAEBaseNext].[dbo].[Vigencias] with (nolock) 
+  WHERE 
+  [SAEBaseNext].[dbo].[vwPlanificacionHorario].JornadaTipo = [SAEBaseNext].[dbo].[Vigencias].JornadaTipo 
+  AND 
+  CONVERT(DATE,[SAEBaseNext].[dbo].[Vigencias].Fecha)='2018/04/18'
+  And Ruta > 0
+  And evento in (11,3)
+
+Consulta la Flota Asignada
+----------------------------------------------------------------------------------------------------------------------
+Select b.operador, b.matricula, b.etiqueta 
+From
+(SELECT distinct vehiculo
+  FROM [SAEExplotacionNext].[dbo].[Asignaciones] with(nolock) where Fecha='2018/04/18') a,
+SAEBaseNext.dbo.Vehiculos b, 
+(Select matricula, max(vinculacion) as vinculacion from SAEBaseNext.dbo.Vehiculos
+Where CONVERT(DATE,vinculacion) <= '2018/04/02'
+group by matricula) d
+WHERE
+a.vehiculo = b.vehiculo
+And b.matricula = d.matricula
+And b.vinculacion = d.vinculacion  
+  
+  
+Consulta la Flota Inmovilizada
+-------------------------------------------------------------------------------------------------------------------
+Select b.operador, a.matricula,
+DATEDIFF(day, '2017/12/31', e.fecharevision) as fechainmovilizacion, 
+DATEDIFF(day, '2017/12/31', max(a.fechahabilitacion)) as fechahabilitacion 
+From vehiculos_inmovilizado a, vehiculos b, vehiculos_basico c,
+(Select matricula, max(vinculacion) as vinculacion from vehiculos
+Where CONVERT(DATE,vinculacion) <= '2018/04/18'
+group by matricula) d,
+(Select matricula, max(fecharevision) as fecharevision from vehiculos_inmovilizado
+Where CONVERT(DATE,fecharevision) <= '2018/04/18'
+Group by matricula) e
+WHERE
+a.matricula = b.matricula
+And a.matricula = c.matricula
+And a.matricula = d.matricula
+And a.matricula = e.matricula
+And b.vinculacion = d.vinculacion
+And a.fecharevision = e.fecharevision 
+And ((CONVERT(DATE,e.fecharevision) <= '2018/04/18' and a.fechahabilitacion is NULL)
+Or (CONVERT(DATE,e.fecharevision) <= '2018/04/18' and a.fechahabilitacion >= '2018/04/19'))
+And (c.estado = 0 )   
+--And operador = 101
+And (b.estado != 2 or b.retiro is null or b.retiro >= '2018/04/18')
+Group by b.operador, a.matricula, b.etiqueta, e.fecharevision
+Order by 1, 3
+
+
+
+Cargue de Flota Total
+-------------------------------------------------------------------------------------------------------------------
+Select DATEDIFF(day, '2016/06/01', '2018/04/18')+1 as fecha_operativa, b.vehiculo, b.operador,  
+case b.estado When 2 Then 'D' Else 'V' end as estado_vinculacion,
+case c.estado When 0 Then 'A' Else 'I' end as estado_vehiculo,
+ISNULL(
+(SELECT 'A'  
+FROM [SAEExplotacionNext].[dbo].[PosicionesLog] A with(nolock) 
+Where 
+CONVERT(DATE,a.Instante) = '2018/04/18' 
+And Estado='5' 
+And  Not a.Linea Is NULL
+And a.unidad = b.vehiculo
+Group by a.unidad), 'N' 
+) as asignacion, CONVERT(DATE,d.vinculacion) as vinculacion,
+B.certvinculacion,
+DATEDIFF(day, '2016/06/01', CONVERT(DATE,e.fecharevision))+1 as fechainmovilizacion,
+convert(varchar,e.fecharevision,108) as horainmovilizacion,
+DATEDIFF(day, '2016/06/01', CONVERT(DATE,e.fechahabilitacion))+1 as fechahabilitacion,
+convert(varchar,e.fechahabilitacion,108) AS hora_habilitacion
+From
+SAEBaseNext.dbo.Vehiculos b
+left join 
+(
+Select b.operador, a.matricula, b.etiqueta, e.fecharevision, max(a.fechahabilitacion) as fechahabilitacion 
+From vehiculos_inmovilizado a, vehiculos b, vehiculos_basico c,
+(Select matricula, max(vinculacion) as vinculacion from vehiculos
+Where CONVERT(DATE,vinculacion) <= '2018/04/18'
+group by matricula) d,
+(Select matricula, max(fecharevision) as fecharevision from vehiculos_inmovilizado
+Where CONVERT(DATE,fecharevision) <= '2018/04/18'
+Group by matricula) e
+WHERE
+a.matricula = b.matricula
+And a.matricula = c.matricula
+And a.matricula = d.matricula
+And a.matricula = e.matricula
+And b.vinculacion = d.vinculacion
+And a.fecharevision = e.fecharevision 
+And ((CONVERT(DATE,e.fecharevision) <= '2018/04/18' and a.fechahabilitacion is NULL)
+Or (CONVERT(DATE,e.fecharevision) <= '2018/04/18' and a.fechahabilitacion > '2018/04/18'))
+And (c.estado = 0 )   
+And (b.estado != 2 or b.retiro is null or b.retiro >= '2018/04/18')
+Group by b.operador, a.matricula, b.etiqueta, e.fecharevision
+) e 
+on b.matricula = e.matricula,
+Vehiculos_Basico c, 
+(Select matricula, max(vinculacion) as vinculacion from SAEBaseNext.dbo.Vehiculos
+Where CONVERT(DATE,vinculacion) <= '2018/04/18' 
+group by matricula) d,
+(
+SELECT distinct operador
+  FROM 
+  [SAEBaseNext].[dbo].[vwPlanificacionHorario] with (nolock), [SAEBaseNext].[dbo].[Vigencias] with (nolock) 
+  WHERE 
+  [SAEBaseNext].[dbo].[vwPlanificacionHorario].JornadaTipo = [SAEBaseNext].[dbo].[Vigencias].JornadaTipo 
+  AND 
+  [SAEBaseNext].[dbo].[Vigencias].Fecha='2018/04/18'
+) f
+WHERE
+b.matricula = c.matricula
+And b.matricula = d.matricula
+And b.vinculacion = d.vinculacion
+And b.Operador = f.Operador
+
+
+
+FLOTA DESVINCULADA
+______________________________________________________________________________________________________________
+Select * FROM
+SAEBaseNext.dbo.Vehiculos b,
+(Select matricula, max(vinculacion) as vinculacion from SAEBaseNext.dbo.Vehiculos
+Where CONVERT(DATE,vinculacion) <= '2018/05/31'
+group by matricula) d
+Where
+b.matricula = d.matricula
+And b.vinculacion = d.vinculacion
+And b.Operador = 101
+And estado = 2
+And Retiro <= '2018/05/31'

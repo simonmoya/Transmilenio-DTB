@@ -1,0 +1,1004 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html";>
+<meta name="keywords" content=" - HTML Report">
+<meta name="author" content="Datanamic - www.datanamic.com">
+<title>Modelo Multidimensional DTB</title>
+<link rel="stylesheet" type="text/css" media="screen,print" href="dbautodoc.css" title="report">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="20" topmargin="10" marginwidth="20" marginheight="10">
+<div class="top">
+Modelo Multidimensional DTB
+</div>
+<ul id="menu">
+<li><a href="index.html">Project details</a></li>
+<li><a href="erdiagram.html">ER diagram</a></li>
+<li><a href="entl.html">Entities</a></li>
+<li><a href="attrl.html">Attributes</a></li>
+<li><a href="rell.html">Relationships</a></li>
+</ul>
+<div class="row">
+<div class="tab"><a href="attrl.html">List of attributes</a></div>
+<div class="activetab">Attribute details</div>
+</div>
+<table width=90% border=0 cellSpacing=0 cellPadding=0 class="chapter">
+<tr>
+<td class="right" valign=top>
+<A NAME="abrev_dia_semana"></A>
+<div class="objectname">Attribute: abrev_dia_semana</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#dia_semana">dia_semana</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Abreviatura del día de la semana. Lu,  Ma,  Mi,  etc.</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(3)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="anyo"></A>
+<div class="objectname">Attribute: anyo</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Año que compone la fecha</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="bimestre"></A>
+<div class="objectname">Attribute: bimestre</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Corresponde al bimestre del año al que pertenece la fecha</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="capacidad_tipo_vehiculo"></A>
+<div class="objectname">Attribute: capacidad_tipo_vehiculo</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#tipo_vehiculo">tipo_vehiculo</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Capacidad en No. de pasajeros asociada al tipo de vehículo</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="certvinculacion"></A>
+<div class="objectname">Attribute: certvinculacion</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_total">flota_total</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">No. de certificado de vinculación</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="cuatrimestre"></A>
+<div class="objectname">Attribute: cuatrimestre</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Corresponde al cuatrimestre del año al que pertenece la fecha</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="descripcion_tipo_servicio"></A>
+<div class="objectname">Attribute: descripcion_tipo_servicio</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#tipo_servicio">tipo_servicio</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Descripción asociada al tipo de servicio</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(50)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="descripcion_tipo_vehiculo"></A>
+<div class="objectname">Attribute: descripcion_tipo_vehiculo</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#tipo_vehiculo">tipo_vehiculo</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Descripción asociada al tipo de vehículo</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(50)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="dia"></A>
+<div class="objectname">Attribute: dia</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Número de día que compone la fecha</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="distancia"></A>
+<div class="objectname">Attribute: distancia</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#linea_ruta">linea_ruta</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Distnacia en metros de una ruta</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata">0</td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="estado_asignacion"></A>
+<div class="objectname">Attribute: estado_asignacion</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_total">flota_total</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Estado de Asignación: A - Asignado,  N - No Asignado</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER(1)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="estado_vehiculo"></A>
+<div class="objectname">Attribute: estado_vehiculo</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_total">flota_total</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Estado del Vehículo: A - Activo,  I - Inactivo</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER(1)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="estado_vinculacion"></A>
+<div class="objectname">Attribute: estado_vinculacion</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_total">flota_total</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Estado de vinculación: V - Vinculado y D - Desvinculado</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER(1)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="etiqueta"></A>
+<div class="objectname">Attribute: etiqueta</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#vehiculo">vehiculo</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Etiqueta con que se identifica el vehículo</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">TEXT</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="expedicionlicencia"></A>
+<div class="objectname">Attribute: expedicionlicencia</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#vehiculo">vehiculo</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Fecha de expedición de la licencia de tránsito</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">TIME</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="fecha"></A>
+<div class="objectname">Attribute: fecha</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata"></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">DATE</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="fecha_fin"></A>
+<div class="objectname">Attribute: fecha_fin</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#evento">evento</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Fecha en la que finalizael evento</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">DATE</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="fecha_inicio"></A>
+<div class="objectname">Attribute: fecha_inicio</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#evento">evento</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Fecha en la que inicia el evento</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">DATE</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="hora"></A>
+<div class="objectname">Attribute: hora</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#hora">hora</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Hora</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="hora_habilitacion"></A>
+<div class="objectname">Attribute: hora_habilitacion</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_total">flota_total</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Hora de habilitación de un vehículo</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">TIME</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="hora_inmovilizacion"></A>
+<div class="objectname">Attribute: hora_inmovilizacion</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_total">flota_total</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Hora de Inmovilización de un vehículo</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">TIME</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_dia_semana"></A>
+<div class="objectname">Attribute: id_dia_semana</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#dia_semana">dia_semana</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código consecutivo que identifica el día de la semana</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_dia_semana"></A>
+<div class="objectname">Attribute: id_dia_semana</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Corresponde al día de la semana asociado (Lunes,  Martes,  Miércoles,  etc)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_evento"></A>
+<div class="objectname">Attribute: id_evento</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Corresponde al evento al que se asocia la fecha. Semana Santa,  Navidad,  etc.</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_evento"></A>
+<div class="objectname">Attribute: id_evento</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#evento">evento</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código consecutivo que identifica el evento</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_fecha"></A>
+<div class="objectname">Attribute: id_fecha</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código consecutivo que identifica la fecha</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">BIGSERIAL</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_fecha_habilitacion"></A>
+<div class="objectname">Attribute: id_fecha_habilitacion</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_total">flota_total</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código de la fecha de habilitación relacionada</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">BIGINT</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_fecha_inmovilizacion"></A>
+<div class="objectname">Attribute: id_fecha_inmovilizacion</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_total">flota_total</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código de la fecha de inmovilización relacionada</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">BIGINT</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_fecha_operacion"></A>
+<div class="objectname">Attribute: id_fecha_operacion</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_total">flota_total</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código de la fecha de operación relacionada</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">BIGINT</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_fecha_programacion"></A>
+<div class="objectname">Attribute: id_fecha_programacion</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_programada">flota_programada</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código de la fecha en la que es programado el servicio de bus</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">BIGINT</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_flota_programada"></A>
+<div class="objectname">Attribute: id_flota_programada</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_programada">flota_programada</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código consecutivo con el que se identifica el registro de flota programada</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">BIGSERIAL</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_flota_total"></A>
+<div class="objectname">Attribute: id_flota_total</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_total">flota_total</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código consecutivo con el que se identifica el registro de flota total</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">BIGSERIAL</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_hora"></A>
+<div class="objectname">Attribute: id_hora</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#hora">hora</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código consecutivo que identifica el registro de la hora</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_linea"></A>
+<div class="objectname">Attribute: id_linea</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_programada">flota_programada</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Linea SAE asociada al servicio de bus programado</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_linea"></A>
+<div class="objectname">Attribute: id_linea</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#linea_ruta">linea_ruta</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Identificador de la línea SAE. Este código corresponde al mismo del campo linea de la tabla Lineas de la Base de Datos SAEExplotacionNext. Junto con la ruta SAE conforman la llave primaria.</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_linea"></A>
+<div class="objectname">Attribute: id_linea</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#linea">linea</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código con el que se identifica la linea en el SAE</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_operador"></A>
+<div class="objectname">Attribute: id_operador</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#operador">operador</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Identificador del operador</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_operador"></A>
+<div class="objectname">Attribute: id_operador</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_programada">flota_programada</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Operador relacionado al servicio de bus programado</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_operador"></A>
+<div class="objectname">Attribute: id_operador</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_total">flota_total</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código del operador relacionado</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_ruta"></A>
+<div class="objectname">Attribute: id_ruta</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#linea_ruta">linea_ruta</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Identificador de la ruta SAE. Este código corresponde al mismo del campo ruta de la tabla Rutas de la Base de Datos SAEExplotacionNext. Junto con la línea SAE conforman la llave primaria.</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_ruta"></A>
+<div class="objectname">Attribute: id_ruta</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_programada">flota_programada</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Ruta SAE asociada al servicio de bus programado</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_ruta"></A>
+<div class="objectname">Attribute: id_ruta</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#ruta">ruta</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Identificador de la ruta SAE. Este código corresponde al mismo del campo ruta de la tabla Rutas de la Base de Datos SAEExplotacionNext</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_ruta_padre"></A>
+<div class="objectname">Attribute: id_ruta_padre</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#linea_ruta">linea_ruta</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">En el caso que se trate de una ruta de refuerzo,  este campo contendrá la ruta original a la que se le brinda dicho refuerzo</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata">0</td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_tipo_dia"></A>
+<div class="objectname">Attribute: id_tipo_dia</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#hora">hora</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata"></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_tipo_dia"></A>
+<div class="objectname">Attribute: id_tipo_dia</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata"></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_tipo_dia"></A>
+<div class="objectname">Attribute: id_tipo_dia</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#tipo_dia">tipo_dia</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código consecutivo con el que se identifica el tipo de día</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_tipo_evento"></A>
+<div class="objectname">Attribute: id_tipo_evento</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#evento">evento</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata"></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_tipo_evento"></A>
+<div class="objectname">Attribute: id_tipo_evento</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#tipo_evento">tipo_evento</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código consecutivo con el que se identifica el tipo de evento</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_tipo_hora"></A>
+<div class="objectname">Attribute: id_tipo_hora</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#tipo_hora">tipo_hora</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código consecutivo con el que se identifica el tipo de hora</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_tipo_hora"></A>
+<div class="objectname">Attribute: id_tipo_hora</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#hora">hora</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Tipo de hora relacionada</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_tipo_horario"></A>
+<div class="objectname">Attribute: id_tipo_horario</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#tipo_horario">tipo_horario</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código consecutivo con el que se identifica el tipo de horario</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_tipo_horario"></A>
+<div class="objectname">Attribute: id_tipo_horario</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#hora">hora</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Tipo de horario relacionado</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_tipo_servicio"></A>
+<div class="objectname">Attribute: id_tipo_servicio</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#vehiculo">vehiculo</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata"></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_tipo_servicio"></A>
+<div class="objectname">Attribute: id_tipo_servicio</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#tipo_servicio">tipo_servicio</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código consecutivo del tipo de servicio</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_tipo_vehiculo"></A>
+<div class="objectname">Attribute: id_tipo_vehiculo</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#tipo_vehiculo">tipo_vehiculo</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código consecutivo del tipo de vehículo</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_tipo_vehiculo"></A>
+<div class="objectname">Attribute: id_tipo_vehiculo</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#vehiculo">vehiculo</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Tipo de vehículo relacionado</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_vehiculo"></A>
+<div class="objectname">Attribute: id_vehiculo</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_total">flota_total</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código del Vehículo equivalente al campo Vehiculo de la tabla Vehiculos de la Base de Datos SAEBaseNext</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="id_vehiculo"></A>
+<div class="objectname">Attribute: id_vehiculo</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#vehiculo">vehiculo</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código consecutivo con el que se identifica el vehículo. Corresponde al mismo código del campo vehiculo de la tabla Vehiculos de la base de datos SAEBaseNext</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="jornadatipo_sae"></A>
+<div class="objectname">Attribute: jornadatipo_sae</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#tipo_evento">tipo_evento</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Código del tipo de Jornada identificada en el SAE</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(20)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="licenciatransito"></A>
+<div class="objectname">Attribute: licenciatransito</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#vehiculo">vehiculo</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Licencia de tránsito del vehículo</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(40)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="matricula"></A>
+<div class="objectname">Attribute: matricula</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#vehiculo">vehiculo</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Corresponde a la placa del vehículo</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">TEXT</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="mes"></A>
+<div class="objectname">Attribute: mes</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Número de Mes que compone la fecha</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="minuto"></A>
+<div class="objectname">Attribute: minuto</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#hora">hora</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Minutos que componen la hora</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="nombre_dia_semana"></A>
+<div class="objectname">Attribute: nombre_dia_semana</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#dia_semana">dia_semana</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Nombre que se asocia al día de la semana. Lunes,  Martes. Miércoles,  etc.</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(10)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="nombre_evento"></A>
+<div class="objectname">Attribute: nombre_evento</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#evento">evento</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Nombre con el que se identifica el evento</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(50)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="nombre_informe"></A>
+<div class="objectname">Attribute: nombre_informe</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#operador">operador</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Nombre del Operador que se emplea para informes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(20)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="nombre_linea"></A>
+<div class="objectname">Attribute: nombre_linea</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#linea">linea</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Nombre con el que se identifica la línea en el SAE</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(50)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="nombre_sae"></A>
+<div class="objectname">Attribute: nombre_sae</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#operador">operador</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Nombre del operador con el que se identifica en el SAE</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(50)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="nombre_tipo_dia"></A>
+<div class="objectname">Attribute: nombre_tipo_dia</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#tipo_dia">tipo_dia</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Nombre que identifica al tipo de día</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(20)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="nombre_tipo_evento"></A>
+<div class="objectname">Attribute: nombre_tipo_evento</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#tipo_evento">tipo_evento</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Nombre con el que se identifica el tipo de evento</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(50)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="nombre_tipo_hora"></A>
+<div class="objectname">Attribute: nombre_tipo_hora</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#tipo_hora">tipo_hora</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Nombre con el que se reconoce el tipo de hora</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(40)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="nombre_tipo_horario"></A>
+<div class="objectname">Attribute: nombre_tipo_horario</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#tipo_horario">tipo_horario</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Nombre asociado al tipo de horario</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(40)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="quincena"></A>
+<div class="objectname">Attribute: quincena</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Corresponde a la quincena del mes a la que pertenece la fecha</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="refer_validacion"></A>
+<div class="objectname">Attribute: refer_validacion</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#operador">operador</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Nombre de referencia con el que se identifica en las Validaciones de RB</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(100)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="ruta_comercial"></A>
+<div class="objectname">Attribute: ruta_comercial</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#linea">linea</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Nombre con el que se da a conocer al público en general</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(50)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="semana"></A>
+<div class="objectname">Attribute: semana</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">No. de semana del año a la que se asocia la semana</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="semestre"></A>
+<div class="objectname">Attribute: semestre</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Corresponde al semestre del año al que pertenece la fecha</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="sentido"></A>
+<div class="objectname">Attribute: sentido</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#ruta">ruta</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Sentido de la ruta. <BR>1 - Ida. <BR>2 - Vuelta <BR>3 - Circular</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata">3</td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="servbus"></A>
+<div class="objectname">Attribute: servbus</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_programada">flota_programada</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Identificador del Servicio de Bus programado. Este campo corresponde al campo Servbus de la vista vwPlanificacionHorario de la base de datos SAEBaseNext</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">CHARACTER VARYING(20)</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="trimestre"></A>
+<div class="objectname">Attribute: trimestre</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#fecha">fecha</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Corresponde al trimestredel año al que pertenece la fecha</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">INTEGER</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+<A NAME="vinculacion"></A>
+<div class="objectname">Attribute: vinculacion</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td valign="top" width= "200" class="fieldname">Table</td><td valign="top" class="fielddata"><A HREF="entd.html#flota_total">flota_total</A></td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Comment</td><td valign="top" class="fielddata">Fecha de Vinculación</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Primary key</td><td valign="top" class="fielddata">No</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Data type</td><td valign="top" class="fielddata">DATE</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Not NULL</td><td valign="top" class="fielddata">Yes</td></tr>
+<tr><td valign="top" width= "200" class="fieldname">Default</td><td valign="top" class="fielddata"></td></tr>
+</table>
+<BR>
+<BR>
+</td>
+</tr>
+</table>
+</body>
+</html>
